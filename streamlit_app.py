@@ -376,7 +376,7 @@ QUESTIONS = [
     "options": [
       { "id": 'a', "text": "Pedir todo frito", "isCorrect": False },
       { "id": 'b', "text": "Pedir salsas y aderezos aparte", "isCorrect": True },
-      { "id": 'c', "text": "No comer nada", "isCorrect: False" }
+      { "id": 'c', "text": "No comer nada", "isCorrect": False }
     ],
     "explanation": "Las salsas suelen esconder mucho sodio. Pedirlas aparte te permite controlar cuánto consumes."
   },

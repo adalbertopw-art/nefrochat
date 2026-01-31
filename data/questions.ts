@@ -485,7 +485,7 @@ export const QUESTIONS: Question[] = [
     options: [
       { id: 'a', text: "No, solo es tema médico", isCorrect: false },
       { id: 'b', text: "Sí, con trámites, discapacidad y apoyo", isCorrect: true },
-      { id: 'c', text: "Solo si estoy hospitalizado", isCorrect: false }
+      { id: 'c', "text": "Solo si estoy hospitalizado", isCorrect: false }
     ],
     explanation: "La ERC tiene impacto laboral y económico. El trabajador social es clave para gestionar ayudas y adaptaciones."
   },
