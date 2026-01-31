@@ -1,20 +1,56 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# NefroChat - Cuestionario de Salud Renal
 
-# Run and deploy your AI Studio app
+Este proyecto es un asistente virtual interactivo diseñado para evaluar y mejorar el conocimiento sobre la Enfermedad Renal Crónica (ERC).
 
-This contains everything you need to run your app locally.
+Existen dos versiones de la aplicación disponibles en este repositorio:
+1. **Versión Web (React/Vite)**: La aplicación web completa y moderna.
+2. **Versión Streamlit (Python)**: Un prototipo rápido en Python.
 
-View your app in AI Studio: https://ai.studio/apps/drive/13KetR7fH5HVzu0JPxa8lXI1_uV3ES5jM
+---
 
-## Run Locally
+## 1. Instrucciones para la Versión Web (React)
 
-**Prerequisites:**  Node.js
+Esta es la versión principal, construida con React, TailwindCSS y TypeScript.
 
+### Requisitos
+- Node.js (versión 16 o superior)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Instalación y Ejecución
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+3. Abrir el navegador en la URL que aparece (usualmente `http://localhost:5173`).
+
+---
+
+## 2. Instrucciones para Streamlit (Python)
+
+Si prefieres ejecutar la versión en Python utilizando Streamlit.
+
+### Requisitos
+- Python 3.8 o superior
+
+### Instalación
+1. Crear un entorno virtual (opcional pero recomendado):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   ```
+2. Instalar Streamlit:
+   ```bash
+   pip install streamlit
+   ```
+
+### Ejecución
+Ejecuta el archivo `streamlit_app.py`:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Esto abrirá automáticamente una pestaña en tu navegador con el cuestionario funcionando.
