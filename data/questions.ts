@@ -25,13 +25,13 @@ export const QUESTIONS: Question[] = [
   },
   {
     id: 2,
-    text: "**Hidratación**\n\nSobre la ingesta de líquidos (agua):",
+    text: "**Hidratación**\n\nSobre la ingesta de líquidos (agua) en etapas pre-diálisis:",
     options: [
-      { id: 'a', text: "Siempre debo beber 3 litros al día", isCorrect: false },
-      { id: 'b', text: "Ajustar según indique mi nefrólogo", isCorrect: true },
+      { id: 'a', text: "Siempre debo beber 5 litros al día", isCorrect: false },
+      { id: 'b', text: "Mantenerse hidratado, ajustando si hay retención de líquidos", isCorrect: true },
       { id: 'c', text: "Dejar de beber líquidos por completo", isCorrect: false }
     ],
-    explanation: "No todos los pacientes necesitan beber mucho; en etapas avanzadas o diálisis puede haber restricción. Tu médico te dará la meta exacta."
+    explanation: "En etapas 1-4, beber agua es bueno para el riñón, salvo que tengas retención de líquidos (hinchazón) severa y tu médico te indique restricción."
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "No, muchos contienen mucho potasio", isCorrect: true },
       { id: 'c', text: "Solo si son de marca reconocida", isCorrect: false }
     ],
-    explanation: "Muchos sustitutos de sal reemplazan el sodio por potasio, lo cual puede ser peligroso si tienes niveles altos de potasio. Consulta a tu médico."
+    explanation: "Muchos sustitutos de sal reemplazan el sodio por potasio, lo cual puede ser peligroso si tus riñones ya no filtran bien el potasio."
   },
   {
     id: 4,
@@ -63,7 +63,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Ibuprofeno o Naproxeno", isCorrect: true },
       { id: 'c', text: "Vitaminas del complejo B", isCorrect: false }
     ],
-    explanation: "Los antiinflamatorios no esteroideos (AINEs) como el ibuprofeno pueden reducir el flujo sanguíneo al riñón y causar daño."
+    explanation: "Los antiinflamatorios no esteroideos (AINEs) como el ibuprofeno pueden reducir el flujo sanguíneo al riñón y causar daño agudo."
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "No, solo afecta a los pulmones", isCorrect: false },
       { id: 'c', text: "Ayuda a bajar la presión", isCorrect: false }
     ],
-    explanation: "Fumar endurece las arterias y reduce el flujo sanguíneo renal, acelerando la progresión de la enfermedad."
+    explanation: "Fumar endurece las arterias y reduce el flujo sanguíneo renal, acelerando la progresión de la enfermedad hacia la diálisis."
   },
   {
     id: 7,
@@ -83,7 +83,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "No, algunas hierbas pueden ser tóxicas", isCorrect: true },
       { id: 'c', text: "Solo si se toma en ayunas", isCorrect: false }
     ],
-    explanation: "Algunas hierbas (como la carambola o ciertas raíces) pueden ser tóxicas para el riñón o interactuar con tus medicamentos."
+    explanation: "Algunas hierbas (como la carambola o ciertas raíces) pueden ser tóxicas para el riñón o interactuar negativamente con tus medicamentos."
   },
   {
     id: 8,
@@ -93,7 +93,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Avisar que tienes enfermedad renal", isCorrect: true },
       { id: 'c', text: "Ir en ayunas de 24 horas", isCorrect: false }
     ],
-    explanation: "El tinte de contraste puede dañar los riñones. Avisar permite a los médicos tomar medidas de protección (nefroprotección)."
+    explanation: "El tinte de contraste puede dañar los riñones. Avisar permite a los médicos tomar medidas de nefroprotección (hidratación previa)."
   },
 
   // --- SÍNTOMAS Y ALERTA ---
@@ -105,7 +105,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Beber más agua", isCorrect: false },
       { id: 'c', text: "Consultar a tu equipo médico", isCorrect: true }
     ],
-    explanation: "La retención repentina de líquidos puede indicar un empeoramiento de la función renal o problemas cardíacos."
+    explanation: "La retención repentina de líquidos puede indicar un empeoramiento de la función renal o problemas cardíacos que requieren atención."
   },
   {
     id: 10,
@@ -115,7 +115,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Pérdida de proteínas (proteinuria)", isCorrect: true },
       { id: 'c', text: "Infección urinaria segura", isCorrect: false }
     ],
-    explanation: "La espuma persistente suele ser señal de que el riñón está dejando escapar proteínas, un signo de daño renal."
+    explanation: "La espuma persistente suele ser señal de que el riñón está dejando escapar proteínas (albúmina), un signo clave de daño renal."
   },
   {
     id: 11,
@@ -123,9 +123,9 @@ export const QUESTIONS: Question[] = [
     options: [
       { id: 'a', text: "Niveles altos de fósforo", isCorrect: true },
       { id: 'b', text: "Alergia al sol", isCorrect: false },
-      { id: 'c', text: "Falta de cremas", isCorrect: false }
+      { id: 'c', "text": "Falta de cremas", isCorrect: false }
     ],
-    explanation: "El exceso de fósforo en sangre puede causar picazón intensa en la piel y debilitar los huesos."
+    explanation: "Cuando los riñones no eliminan bien el fósforo, este se acumula causando picazón en la piel y problemas en los huesos."
   },
   {
     id: 12,
@@ -135,7 +135,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "El riñón produce menos eritropoyetina", isCorrect: true },
       { id: 'c', text: "Por comer mucha carne", isCorrect: false }
     ],
-    explanation: "Los riñones sanos producen eritropoyetina (EPO), hormona que crea glóbulos rojos. En ERC, esta producción disminuye."
+    explanation: "Los riñones sanos producen eritropoyetina (EPO), hormona que crea glóbulos rojos. En ERC avanzada, esta producción disminuye."
   },
 
   // --- NUTRICIÓN: POTASIO Y FÓSFORO ---
@@ -147,7 +147,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Manzana, pera, arroz", isCorrect: false },
       { id: 'c', text: "Aceite de oliva", isCorrect: false }
     ],
-    explanation: "El plátano, los cítricos, el tomate y el aguacate son ricos en potasio. Si tienes restricción, modera su consumo."
+    explanation: "El plátano, cítricos, tomate y aguacate son ricos en potasio. Si tu médico te restringió el potasio, modera su consumo."
   },
   {
     id: 14,
@@ -167,7 +167,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "En aditivos de comida procesada/refrescos", isCorrect: true },
       { id: 'c', text: "En el pescado fresco", isCorrect: false }
     ],
-    explanation: "El fósforo inorgánico (aditivos conservantes en refrescos oscuros, embutidos) se absorbe casi al 100% y es muy dañino."
+    explanation: "El fósforo inorgánico (aditivos en embutidos, refrescos oscuros) se absorbe casi al 100% y es muy dañino para tus vasos sanguíneos."
   },
   {
     id: 16,
@@ -177,19 +177,19 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Mejor visión", isCorrect: false },
       { id: 'c', text: "Aumento de masa muscular", isCorrect: false }
     ],
-    explanation: "La ERC altera el metabolismo mineral, pudiendo causar enfermedad ósea y calcificación de vasos sanguíneos."
+    explanation: "La ERC altera el equilibrio mineral. Controlar el fósforo protege tus huesos y evita calcificaciones en el corazón."
   },
 
-  // --- COMORBILIDADES: DIABETES Y PRESIÓN ---
+  // --- COMORBILIDADES Y PREVENCIÓN ---
   {
     id: 17,
-    text: "**Presión Arterial**\n\n¿Por qué es crucial controlar la hipertensión?",
+    text: "**Presión Arterial**\n\n¿Por qué es crucial controlar la hipertensión en pre-diálisis?",
     options: [
-      { id: 'a', text: "Es la causa #2 de fallo renal", isCorrect: true },
+      { id: 'a', text: "Para retrasar la necesidad de diálisis", isCorrect: true },
       { id: 'b', text: "Para evitar mareos solamente", isCorrect: false },
       { id: 'c', text: "No es relevante en ERC", isCorrect: false }
     ],
-    explanation: "La presión alta daña las unidades de filtración del riñón. Mantenerla en meta (ej. <130/80) protege tu función renal."
+    explanation: "La presión alta golpea y daña los filtros del riñón. Mantenerla controlada es la mejor forma de frenar la enfermedad."
   },
   {
     id: 18,
@@ -199,7 +199,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Mantener la glucosa en rangos normales", isCorrect: true },
       { id: 'c', text: "Dejar de beber agua", isCorrect: false }
     ],
-    explanation: "El exceso de azúcar en sangre es la causa número 1 de enfermedad renal en el mundo."
+    explanation: "El exceso de azúcar en sangre es la causa principal de daño renal. Un buen control de glucosa protege la función renal restante."
   },
   {
     id: 19,
@@ -209,7 +209,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Sí, puede obstruir arterias renales", isCorrect: true },
       { id: 'c', text: "Es beneficioso", isCorrect: false }
     ],
-    explanation: "La acumulación de placas de grasa puede reducir el flujo de sangre a los riñones, empeorando la función renal."
+    explanation: "La grasa puede obstruir las arterias del riñón igual que las del corazón, reduciendo su capacidad de limpieza."
   },
   {
     id: 20,
@@ -219,19 +219,19 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "La insulina dura más tiempo en sangre", isCorrect: true },
       { id: 'c', text: "El riñón produce glucosa", isCorrect: false }
     ],
-    explanation: "El riñón elimina la insulina. Si falla, la insulina circula más tiempo, aumentando el riesgo de bajadas de azúcar."
+    explanation: "El riñón enfermo tarda más en eliminar la insulina del cuerpo, lo que aumenta el riesgo de bajadas de azúcar peligrosas."
   },
 
   // --- ESTILO DE VIDA ---
   {
     id: 21,
-    text: "**Ejercicio Físico**\n\n¿Se recomienda hacer ejercicio con ERC?",
+    text: "**Ejercicio Físico**\n\n¿Se recomienda hacer ejercicio en etapas 1-4?",
     options: [
       { id: 'a', text: "No, es mejor reposo absoluto", isCorrect: false },
-      { id: 'b', text: "Sí, actividad moderada regular", isCorrect: true },
-      { id: 'c', text: "Solo maratones", isCorrect: false }
+      { id: 'b', text: "Sí, actividad moderada regular ayuda a controlar la presión", isCorrect: true },
+      { id: 'c', text: "Solo deportes extremos", isCorrect: false }
     ],
-    explanation: "El ejercicio moderado ayuda a controlar la presión, el azúcar y mejora el ánimo. Consulta a tu médico antes de empezar."
+    explanation: "El ejercicio aeróbico moderado (caminar, nadar) ayuda a controlar el peso y la presión arterial, protegiendo el riñón."
   },
   {
     id: 22,
@@ -241,7 +241,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Obliga al riñón a hiperfiltrar (trabajar más)", isCorrect: true },
       { id: 'c', text: "No tiene relación", isCorrect: false }
     ],
-    explanation: "El sobrepeso exige que los riñones filtren más sangre para satisfacer las demandas metabólicas, desgastándolos a largo plazo."
+    explanation: "El sobrepeso exige un esfuerzo extra a los riñones para filtrar más sangre. Bajar de peso ayuda a reducir la proteinuria."
   },
   {
     id: 23,
@@ -251,17 +251,17 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "No, duermen mejor", isCorrect: false },
       { id: 'c', text: "Solo si toman café", isCorrect: false }
     ],
-    explanation: "La apnea del sueño y el síndrome de piernas inquietas son comunes y pueden afectar la calidad de vida y la presión arterial."
+    explanation: "El mal descanso afecta la presión arterial. Si roncas mucho o dejas de respirar al dormir, consulta a tu médico."
   },
   {
     id: 24,
-    text: "**Salud Mental**\n\n¿Es normal sentir ansiedad o tristeza tras el diagnóstico?",
+    text: "**Salud Mental**\n\n¿Es normal sentir ansiedad por el diagnóstico?",
     options: [
       { id: 'a', text: "No, no es para tanto", isCorrect: false },
-      { id: 'b', text: "Sí, es importante buscar apoyo emocional", isCorrect: true },
+      { id: 'b', text: "Sí, buscar apoyo emocional ayuda al tratamiento", isCorrect: true },
       { id: 'c', text: "Se pasa comiendo chocolate", isCorrect: false }
     ],
-    explanation: "El impacto emocional de una enfermedad crónica es real. Cuidar tu mente es parte del tratamiento."
+    explanation: "El estrés crónico puede elevar la presión arterial. Cuidar tu mente es parte esencial de cuidar tus riñones."
   },
 
   // --- TRATAMIENTOS Y GENERALIDADES ---
@@ -270,30 +270,30 @@ export const QUESTIONS: Question[] = [
     text: "**Etapas de la ERC**\n\nLa ERC se divide en 5 etapas. ¿En qué se basa esta clasificación?",
     options: [
       { id: 'a', text: "En el dolor que sientes", isCorrect: false },
-      { id: 'b', text: "En la Tasa de Filtrado Glomerular (FG)", isCorrect: true },
+      { id: 'b', text: "En la Tasa de Filtrado Glomerular (función renal)", isCorrect: true },
       { id: 'c', text: "En la cantidad de orina", isCorrect: false }
     ],
-    explanation: "Se clasifica según el porcentaje de función renal (FG). La etapa 5 es cuando el riñón funciona a menos del 15%."
+    explanation: "Se clasifica según cuánto limpian tus riñones. Conocer tu etapa te ayuda a saber qué cuidados específicos necesitas."
   },
   {
     id: 26,
-    text: "**Diálisis**\n\n¿Qué hace la diálisis?",
+    text: "**Función Renal**\n\n¿Qué significa que los riñones 'fallen'?",
     options: [
-      { id: 'a', text: "Cura el riñón definitivamente", isCorrect: false },
-      { id: 'b', text: "Reemplaza parte de la función de limpieza", isCorrect: true },
-      { id: 'c', text: "Genera hormonas nuevas", isCorrect: false }
+      { id: 'a', text: "Que duelen mucho", isCorrect: false },
+      { id: 'b', text: "Que no limpian bien la sangre de desechos y agua", isCorrect: true },
+      { id: 'c', text: "Que se caen de su lugar", isCorrect: false }
     ],
-    explanation: "La diálisis limpia la sangre de toxinas y exceso de agua, pero no realiza todas las funciones hormonales del riñón."
+    explanation: "La insuficiencia renal es la acumulación de toxinas y líquidos que el riñón ya no puede eliminar por la orina."
   },
   {
     id: 27,
-    text: "**Trasplante Renal**\n\nEl trasplante renal:",
+    text: "**Trasplante Renal**\n\n¿Es posible un trasplante antes de llegar a diálisis?",
     options: [
-      { id: 'a', text: "Es una cura mágica sin medicación", isCorrect: false },
-      { id: 'b', text: "Es un tratamiento que requiere cuidados de por vida", isCorrect: true },
-      { id: 'c', text: "Solo se hace entre hermanos", isCorrect: false }
+      { id: 'a', text: "Nunca", isCorrect: false },
+      { id: 'b', text: "Sí, se llama trasplante anticipado", isCorrect: true },
+      { id: 'c', text: "Solo si es un niño", isCorrect: false }
     ],
-    explanation: "El trasplante es el mejor tratamiento sustitutivo, pero requiere tomar inmunosupresores siempre para evitar el rechazo."
+    explanation: "El trasplante anticipado (pre-diálisis) es una opción ideal si hay donante vivo, evitando el desgaste de la diálisis."
   },
   {
     id: 28,
@@ -303,29 +303,29 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "No, bajan las defensas", isCorrect: false },
       { id: 'c', text: "Solo la de la gripe", isCorrect: false }
     ],
-    explanation: "Los pacientes renales tienen mayor riesgo de infecciones. Las vacunas son una protección esencial."
+    explanation: "Los pacientes renales tienen mayor riesgo de infecciones. Mantener el esquema de vacunación al día es vital."
   },
 
-  // --- CUIDADOS ESPECÍFICOS ---
+  // --- CUIDADOS ESPECÍFICOS PRE-DIÁLISIS ---
   {
     id: 29,
-    text: "**Cuidado del Acceso (Fístula)**\n\nSi tienes una fístula para hemodiálisis, ¿qué NO debes hacer?",
+    text: "**Preservación de Venas**\n\nPensando en el futuro, ¿qué recomendación se da sobre las venas de tus brazos?",
     options: [
-      { id: 'a', text: "Lavarla con agua y jabón", isCorrect: false },
-      { id: 'b', text: "Dormir sobre ese brazo o usar ropa apretada", isCorrect: true },
-      { id: 'c', text: "Palpar el 'thrill' (vibración)", isCorrect: false }
+      { id: 'a', text: "Se pueden usar para sacar sangre siempre", isCorrect: false },
+      { id: 'b', text: "Evitar punciones en el brazo no dominante (reserva)", isCorrect: true },
+      { id: 'c', text: "Hacer tatuajes encima", isCorrect: false }
     ],
-    explanation: "No se debe comprimir la fístula (relojes, bolsos, dormir encima) para evitar que se pare el flujo de sangre."
+    explanation: "Es vital 'guardar' las venas de un brazo (generalmente el izquierdo si eres diestro) por si en el futuro necesitas una fístula."
   },
   {
     id: 30,
-    text: "**Catéter**\n\nSi tienes un catéter para diálisis, el mayor riesgo es:",
+    text: "**Vacunación Neumococo**\n\nAdemás de la gripe, ¿qué otra vacuna es importante en ERC?",
     options: [
-      { id: 'a', text: "Que se salga al caminar", isCorrect: false },
-      { id: 'b', text: "La infección", isCorrect: true },
-      { id: 'c', text: "Que te dé alergia", isCorrect: false }
+      { id: 'a', text: "Fiebre amarilla anual", isCorrect: false },
+      { id: 'b', text: "Neumococo (Neumonía)", isCorrect: true },
+      { id: 'c', text: "Ninguna más", isCorrect: false }
     ],
-    explanation: "Mantener el catéter limpio y seco es vital. La infección de catéter puede ser grave y llegar a la sangre."
+    explanation: "La ERC debilita el sistema inmune. La vacuna contra el neumococo protege de neumonías graves."
   },
   {
     id: 31,
@@ -335,29 +335,29 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Se modera su consumo", isCorrect: true },
       { id: 'c', text: "Se prohíben totalmente", isCorrect: false }
     ],
-    explanation: "Moderar las proteínas reduce la carga de trabajo del riñón y la producción de desechos urémicos."
+    explanation: "Moderar las proteínas reduce la carga de trabajo del riñón y la producción de desechos, retrasando la diálisis."
   },
   {
     id: 32,
-    text: "**Proteínas en Diálisis**\n\nUna vez en diálisis, ¿cómo cambia la necesidad de proteínas?",
+    text: "**Proteínas Vegetales**\n\n¿Qué ventaja tienen las proteínas vegetales (legumbres) en la dieta renal?",
     options: [
-      { id: 'a', text: "Sigue siendo baja", isCorrect: false },
-      { id: 'b', text: "Aumenta, necesitas comer más proteína", isCorrect: true },
-      { id: 'c', text: "Es indiferente", isCorrect: false }
+      { id: 'a', text: "Saben mejor", isCorrect: false },
+      { id: 'b', text: "Generan menos toxinas y carga ácida", isCorrect: true },
+      { id: 'c', text: "Tienen más fósforo absorbible", isCorrect: false }
     ],
-    explanation: "La diálisis hace perder proteínas, por lo que los pacientes en diálisis suelen necesitar comer MÁS proteínas (clara de huevo, pescado, pollo)."
+    explanation: "Las proteínas vegetales son más 'amables' con el riñón y su fósforo se absorbe menos que el de las carnes."
   },
 
   // --- MISCELÁNEA ---
   {
     id: 33,
-    text: "**Sed**\n\nSi tienes restricción de líquidos y tienes mucha sed, un truco es:",
+    text: "**Sed**\n\nSi tienes restricción de líquidos, un truco para calmar la sed es:",
     options: [
       { id: 'a', text: "Beber un vaso grande rápido", isCorrect: false },
       { id: 'b', text: "Chupar un cubito de hielo o limón", isCorrect: true },
       { id: 'c', text: "Comer algo salado", isCorrect: false }
     ],
-    explanation: "Chupar hielo, rodajas de limón o caramelos ácidos sin azúcar ayuda a estimular la saliva y calmar la sed sin beber mucho líquido."
+    explanation: "Chupar hielo o rodajas de limón ayuda a estimular la saliva y calmar la sed sin ingerir grandes cantidades de líquido."
   },
   {
     id: 34,
@@ -367,67 +367,67 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Palabras con 'FOS' (Fosfato...)", isCorrect: true },
       { id: 'c', text: "Harina de trigo", isCorrect: false }
     ],
-    explanation: "Busca 'Fosfato' en los ingredientes. Si aparece, ese alimento tiene aditivos de fósforo muy absorbibles."
+    explanation: "Busca 'Fosfato' en los ingredientes. Si aparece, ese alimento tiene aditivos de fósforo muy dañinos."
   },
   {
     id: 35,
-    text: "**Fruta Estrellada (Carambola)**\n\n¿Por qué se prohíbe la carambola (Star fruit) en pacientes renales?",
+    text: "**Fruta Estrellada (Carambola)**\n\n¿Por qué se prohíbe la carambola en pacientes renales?",
     options: [
       { id: 'a', text: "Tiene mucho azúcar", isCorrect: false },
       { id: 'b', text: "Contiene una neurotoxina peligrosa", isCorrect: true },
       { id: 'c', text: "Es muy ácida", isCorrect: false }
     ],
-    explanation: "La carambola tiene una toxina que los riñones enfermos no pueden filtrar, pudiendo causar daños neurológicos graves."
+    explanation: "La carambola tiene una toxina que los riñones enfermos no pueden filtrar, pudiendo causar daños neurológicos."
   },
   {
     id: 36,
-    text: "**Viajes**\n\n¿Puedes viajar si estás en diálisis?",
+    text: "**Comer Fuera**\n\nSi vas a un restaurante, una buena estrategia es:",
     options: [
-      { id: 'a', text: "Nunca", isCorrect: false },
-      { id: 'b', text: "Sí, coordinando con centros del destino", isCorrect: true },
-      { id: 'c', text: "Solo viajes de 1 día", isCorrect: false }
+      { id: 'a', text: "Pedir todo frito", isCorrect: false },
+      { id: 'b', text: "Pedir salsas y aderezos aparte", isCorrect: true },
+      { id: 'c', text: "No comer nada", isCorrect: false }
     ],
-    explanation: "Se puede viajar planificando con antelación para asegurar sesiones de diálisis en el lugar de destino (diálisis vacacional)."
+    explanation: "Las salsas suelen esconder mucho sodio. Pedirlas aparte te permite controlar cuánto consumes."
   },
   {
     id: 37,
     text: "**Sexualidad**\n\n¿La ERC puede afectar la vida sexual?",
     options: [
       { id: 'a', text: "No, en absoluto", isCorrect: false },
-      { id: 'b', text: "Sí, por fatiga, hormonas o medicación", isCorrect: true },
+      { id: 'b', text: "Sí, por fatiga o medicación, pero tiene tratamiento", isCorrect: true },
       { id: 'c', text: "Aumenta el deseo", isCorrect: false }
     ],
-    explanation: "Es común y tratable. La fatiga y cambios hormonales influyen. Hablar con el médico es importante para buscar soluciones."
+    explanation: "Es común. Hablar con el médico es importante para buscar soluciones y mejorar la calidad de vida."
   },
   {
     id: 38,
     text: "**Embarazo**\n\n¿Una mujer con ERC puede quedarse embarazada?",
     options: [
       { id: 'a', text: "Es imposible", isCorrect: false },
-      { id: 'b', text: "Es posible, pero de alto riesgo", isCorrect: true },
+      { id: 'b', text: "Es posible, pero requiere planificación médica estricta", isCorrect: true },
       { id: 'c', text: "No hay ningún riesgo", isCorrect: false }
     ],
-    explanation: "Es un embarazo de riesgo que requiere monitoreo muy estrecho y ajuste de medicación, pero es posible en muchos casos."
+    explanation: "Es un embarazo de riesgo que requiere monitoreo muy estrecho y ajuste de medicación para proteger a la madre y al bebé."
   },
   {
     id: 39,
-    text: "**Días de Enfermedad**\n\nSi tienes vómitos o diarrea (gastroenteritis):",
+    text: "**Días de Enfermedad**\n\nSi tienes vómitos o diarrea (gastroenteritis), ¿qué debes vigilar?",
     options: [
-      { id: 'a', text: "Sigue tomando todas las pastillas igual", isCorrect: false },
-      { id: 'b', text: "Consulta sobre pausar diuréticos/antihipertensivos", isCorrect: true },
-      { id: 'c', text: "Come más sal", isCorrect: false }
+      { id: 'a', text: "Nada en especial", isCorrect: false },
+      { id: 'b', text: "Deshidratación y posible pausa de diuréticos/IECA", isCorrect: true },
+      { id: 'c', text: "Comer más sal", isCorrect: false }
     ],
-    explanation: "La deshidratación puede dañar el riñón agudamente ('Sick day rules'). A veces hay que suspender temporalmente ciertos fármacos."
+    explanation: "La deshidratación puede causar un fallo renal agudo. A veces hay que suspender temporalmente ciertos fármacos ('Sick day rules')."
   },
   {
     id: 40,
-    text: "**Corazón**\n\nLa principal causa de muerte en pacientes renales es:",
+    text: "**Corazón**\n\nLa principal causa de complicación en pacientes renales es:",
     options: [
       { id: 'a', text: "El fallo renal en sí", isCorrect: false },
       { id: 'b', text: "Enfermedades cardiovasculares", isCorrect: true },
       { id: 'c', text: "Infecciones", isCorrect: false }
     ],
-    explanation: "Cuidar el corazón (colesterol, presión, tabaco) es tan importante como cuidar el riñón, ya que están conectados."
+    explanation: "Cuidar el corazón (colesterol, presión) es tan importante como cuidar el riñón, ya que están conectados."
   },
   {
     id: 41,
@@ -444,40 +444,40 @@ export const QUESTIONS: Question[] = [
     text: "**Bicarbonato**\n\n¿Por qué algunos pacientes toman bicarbonato?",
     options: [
       { id: 'a', text: "Para la digestión solamente", isCorrect: false },
-      { id: 'b', text: "Para corregir la acidosis metabólica", isCorrect: true },
+      { id: 'b', text: "Para corregir la acidez de la sangre (acidosis)", isCorrect: true },
       { id: 'c', text: "Para blanquear los dientes", isCorrect: false }
     ],
-    explanation: "El riñón dañado no elimina bien los ácidos. El médico puede recetar bicarbonato para equilibrar el pH de la sangre."
+    explanation: "El riñón dañado no elimina bien los ácidos. Corregir la acidosis ayuda a preservar el riñón y el hueso."
   },
   {
     id: 43,
     text: "**Vitaminas**\n\n¿Debo tomar multivitamínicos normales de farmacia?",
     options: [
       { id: 'a', text: "Sí, cuantos más mejor", isCorrect: false },
-      { id: 'b', text: "Mejor vitaminas específicas para renales", isCorrect: true },
+      { id: 'b', text: "Mejor consultar, algunos tienen potasio o dañan el riñón", isCorrect: true },
       { id: 'c', text: "No, las vitaminas son malas", isCorrect: false }
     ],
-    explanation: "Los multivitamínicos comunes pueden tener demasiado potasio o vitamina A, que se acumulan. Existen complejos específicos (hidrosolubles)."
+    explanation: "Los multivitamínicos comunes pueden no ser seguros. Existen complejos específicos para pacientes renales."
   },
   {
     id: 44,
-    text: "**Calambres**\n\n¿Qué causa calambres frecuentes en diálisis?",
+    text: "**Sabor Metálico**\n\nSi sientes un sabor metálico o amargo en la boca, puede indicar:",
     options: [
-      { id: 'a', text: "Sacar demasiado líquido rápido", isCorrect: true },
-      { id: 'b', text: "Estar muy relajado", isCorrect: false },
-      { id: 'c', text: "Comer mucho pan", isCorrect: false }
+      { id: 'a', text: "Que has comido hierro", isCorrect: false },
+      { id: 'b', text: "Niveles altos de urea (toxinas) en sangre", isCorrect: true },
+      { id: 'c', text: "Mala higiene dental solamente", isCorrect: false }
     ],
-    explanation: "Los cambios rápidos de fluidos y electrolitos durante la sesión pueden provocar calambres dolorosos."
+    explanation: "La uremia (toxinas altas) altera el gusto y a menudo provoca rechazo a la carne, indicando necesidad de ajuste dietético o médico."
   },
   {
     id: 45,
-    text: "**Peso Seco**\n\nEn hemodiálisis, ¿qué es el 'peso seco'?",
+    text: "**Control de Peso**\n\n¿Por qué es bueno pesarse regularmente en ayunas?",
     options: [
-      { id: 'a', text: "Tu peso sin ropa", isCorrect: false },
-      { id: 'b', text: "Tu peso ideal sin exceso de líquido", isCorrect: true },
-      { id: 'c', text: "Tu peso al nacer", isCorrect: false }
+      { id: 'a', text: "Para ver si engordé por comer", isCorrect: false },
+      { id: 'b', text: "Para detectar retención de líquidos (edema)", isCorrect: true },
+      { id: 'c', text: "No sirve de nada", isCorrect: false }
     ],
-    explanation: "Es el peso objetivo al terminar la diálisis, donde estás normohidratado y la presión arterial debería estar controlada."
+    explanation: "Un aumento rápido de peso (ej. 1-2 kg en días) suele ser agua, no grasa, avisando de que el riñón está reteniendo líquidos."
   },
   {
     id: 46,
@@ -497,17 +497,17 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Tú (el paciente)", isCorrect: true },
       { id: 'c', text: "La enfermera", isCorrect: false }
     ],
-    explanation: "Tú tomas decisiones cada día sobre qué comer, beber y tomar medicación. El éxito depende principalmente de ti."
+    explanation: "Tú tomas decisiones cada día sobre qué comer, beber y tomar medicación. El éxito del tratamiento depende de ti."
   },
   {
     id: 48,
     text: "**Piedras en el Riñón**\n\nPara prevenir cálculos renales, generalmente se recomienda:",
     options: [
       { id: 'a', text: "Beber poca agua", isCorrect: false },
-      { id: 'b', text: "Buena hidratación y moderar sal/proteína", isCorrect: true },
+      { id: 'b', text: "Buena hidratación y moderar sal/proteína animal", isCorrect: true },
       { id: 'c', text: "Comer mucho calcio en pastillas", isCorrect: false }
     ],
-    explanation: "Mantener la orina diluida bebiendo agua es la medida más eficaz para prevenir la cristalización de piedras."
+    explanation: "Mantener la orina diluida bebiendo agua y reducir la sal es la medida más eficaz para prevenir piedras."
   },
   {
     id: 49,
@@ -517,7 +517,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Para no contagiar a otros", isCorrect: false },
       { id: 'c', text: "Porque huele mal", isCorrect: false }
     ],
-    explanation: "Una infección de vejiga no tratada puede ascender a los riñones y causar una infección grave que deje cicatrices renales."
+    explanation: "Una infección de vejiga no tratada puede ascender a los riñones, causando cicatrices que empeoran la función renal."
   },
   {
     id: 50,
@@ -527,7 +527,7 @@ export const QUESTIONS: Question[] = [
       { id: 'b', text: "Sí, facilita cocinar y da apoyo moral", isCorrect: true },
       { id: 'c', text: "Solo si ellos también están enfermos", isCorrect: false }
     ],
-    explanation: "El apoyo familiar facilita el cumplimiento de la dieta y reduce la sensación de aislamiento."
+    explanation: "El apoyo familiar facilita el cumplimiento de la dieta y reduce la carga emocional de la enfermedad."
   }
 ];
 

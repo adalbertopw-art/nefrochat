@@ -16,12 +16,17 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
            <HeartPulse size={48} className="text-teal-500" />
         </div>
 
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">
           Nefro<span className="text-teal-600">Chat</span>
         </h1>
         
+        <div className="mb-6">
+          <p className="text-xs font-bold text-teal-700 uppercase tracking-wider mb-1">Centro de Excelencia en ERC</p>
+          <p className="text-sm font-semibold text-slate-700">Hospital Internacional de Colombia</p>
+        </div>
+        
         <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-          Un espacio seguro para evaluar y mejorar tus conocimientos sobre el cuidado de tus riñones.
+          Un espacio interactivo para aprender a cuidar tus riñones y retrasar la progresión de la enfermedad.
         </p>
 
         {/* Features Grid */}
@@ -31,8 +36,8 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
               <Activity size={18} />
             </div>
             <div>
-              <h3 className="font-semibold text-slate-800">Evaluación Interactiva</h3>
-              <p className="text-sm text-slate-500">Responde preguntas sencillas sobre tu salud renal.</p>
+              <h3 className="font-semibold text-slate-800">Evaluación Pre-Diálisis</h3>
+              <p className="text-sm text-slate-500">Preguntas diseñadas para pacientes en tratamiento conservador.</p>
             </div>
           </div>
           
@@ -42,7 +47,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             </div>
             <div>
               <h3 className="font-semibold text-slate-800">Consejos de Autocuidado</h3>
-              <p className="text-sm text-slate-500">Recibe retroalimentación inmediata y consejos prácticos.</p>
+              <p className="text-sm text-slate-500">Recomendaciones para proteger tu función renal actual.</p>
             </div>
           </div>
         </div>
@@ -53,7 +58,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
         </Button>
 
         <p className="mt-6 text-xs text-slate-400">
-          Diseñado con ❤️ para pacientes renales.
+          Herramienta educativa de apoyo al paciente.
         </p>
       </div>
     </div>

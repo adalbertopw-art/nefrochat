@@ -53,8 +53,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onRestart }) => {
       setQuizQuestions(questionsForSession);
 
       // 2. Greetings
-      await simulateBotResponse("¡Hola! Soy **NefroAmigo** 👋.\n\nSoy tu asistente virtual para repasar conocimientos clave sobre el cuidado de tus riñones.");
-      await simulateBotResponse(`Te haré **${questionsForSession.length} preguntas breves** seleccionadas de mi banco de conocimientos. No te preocupes si fallas, ¡estamos aquí para aprender!\n\n¿Listo para comenzar?`);
+      await simulateBotResponse("¡Hola! Soy **NefroAmigo** 👋, tu asistente virtual del **Centro de Excelencia en Enfermedad Renal Crónica del Hospital Internacional de Colombia**.");
+      await simulateBotResponse(`Estoy aquí para repasar contigo conocimientos clave sobre el **autocuidado en etapas previas a la diálisis** (preservación de la función renal).\n\nTe haré **${questionsForSession.length} preguntas breves**. No te preocupes si fallas, ¡estamos aquí para aprender!`);
       
       // 3. Ask first question
       if (questionsForSession.length > 0) {
@@ -103,11 +103,11 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onRestart }) => {
     
     let evaluation = "";
     if (finalScore === totalQuestions) {
-      evaluation = "¡Excelente! 🌟 Tienes un gran conocimiento sobre el cuidado renal. ¡Sigue así!";
+      evaluation = "¡Excelente! 🌟 Demuestras un gran compromiso con el cuidado de tus riñones. ¡Sigue así!";
     } else if (finalScore >= totalQuestions * 0.7) {
-      evaluation = "¡Muy bien! 👍 Tienes buenas bases, pero siempre hay algo nuevo que aprender. Revisa los puntos que fallaste.";
+      evaluation = "¡Muy bien! 👍 Tienes buenas bases para proteger tu función renal, pero siempre hay algo nuevo que aprender.";
     } else {
-      evaluation = "Gracias por participar. 💪 Aprender sobre la enfermedad es el primer paso para cuidarse mejor. ¡No te desanimes!";
+      evaluation = "Gracias por participar. 💪 Aprender sobre la enfermedad es el primer paso para retrasar su progresión. ¡No te desanimes!";
     }
 
     await simulateBotResponse(`🎉 **¡Cuestionario completado!**\n\nHas acertado **${finalScore} de ${totalQuestions}** preguntas.\n\n${evaluation}`);
@@ -127,7 +127,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onRestart }) => {
           </div>
           <div>
             <h1 className="font-bold text-lg text-slate-800">NefroAmigo</h1>
-            <p className="text-xs text-slate-500 font-medium">Cuestionario Educativo</p>
+            <p className="text-xs text-slate-500 font-medium">HIC - Hospital Internacional de Colombia</p>
           </div>
         </div>
         <button 
